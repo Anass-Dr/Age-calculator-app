@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  color: hsl(0, 0%, 8%);
+  background: hsl(0, 0%, 94%);
+}
+.app {
+  width: 100%;
+  max-width: 375px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 25px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.05);
+}
+form {
+  display: flex;
+  gap: 1rem;
+}
+.form-control {
+  flex: 1;
+}
+label {
+  color: hsl(0, 1%, 44%);
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid hsl(0, 0%, 86%);
+  outline-color: hsl(259, 100%, 65%);
+  font-size: 20px;
+  font-weight: 700;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.error-info {
+  display: block;
+  font-size: 9px;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  margin-top: 10px;
+}
+.divider {
+  padding: 60px 0;
+  position: relative;
+}
+.divider hr {
+  height: 2px;
+  background: hsl(0, 0%, 94%);
+  border: none;
+}
+.divider button {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  background: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+.divider button:hover {
+  background: hsl(0, 0%, 8%);
+}
+.divider img {
+  width: 50%;
+}
+.output div {
+  display: flex;
+  gap: 12px;
+}
+.output h2,
+.output span {
+  font-size: 50px;
+  font-weight: 800;
+  font-style: italic;
+}
+.output span {
+  color: hsl(259, 100%, 65%);
+}
+
+.error label {
+  color: hsl(0, 100%, 67%) !important;
+}
+.error input {
+  border-color: hsl(0, 100%, 67%) !important;
+  outline-color: hsl(0, 100%, 67%) !important;
+}
+
+@media (min-width: 600px) {
+  .app {
+    max-width: 900px;
+    padding: 50px 60px;
+    border-bottom-right-radius: 200px;
+  }
+  form {
+    gap: 2rem;
+  }
+  .form-control {
+    flex: none;
+  }
+  input {
+    font-size: 30px;
+    max-width: 150px;
+  }
+  .error-info {
+    font-size: 14px;
+  }
+  .divider button {
+    width: 100px;
+    height: 100px;
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+  .output h2,
+  .output span {
+    font-size: 80px;
+  }
+}
